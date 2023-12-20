@@ -1,5 +1,5 @@
 #chat-controls {
-  color: darkslategrey;
+  color: var(--color-active);
 }
 
 .sidebar-popout,
@@ -36,7 +36,7 @@
   background-size: cover;
   color: white;
   box-shadow: 0 0 10px var(--color-active);
-  border-bottom: 1px solid goldenrod;
+  border-bottom: 1px solid var(--color-border);
 }
 
 #sidebar-tabs .item.active {
@@ -46,10 +46,10 @@
 
 #scenes-popout .directory-list .directory-item .document-name a,
 #sidebar #scenes .directory-list .directory-item .document-name a {
-  background-color: rgba(24, 48, 81, 1);
-  color: white;
+  background-color: var(--color-active);
+  color: var(--color-header);;
   border-radius: 2px;
-  border: 1px double rgba(255, 255, 255, 0.2);
+  border: 1px double var(--color-border);
   padding: 10px;
   box-shadow: 0 0 5px #000000 inset;
   font-family: var(--actor-input-font-family);
@@ -67,7 +67,7 @@
     font-size: 14px;
     font-weight: 500;
     border:none; */
-  border: 2px solid darkslategrey;
+  border: 2px solid var(--color-border);
   background: none;
 }
 
@@ -76,7 +76,7 @@
   line-height: normal;
   vertical-align: middle;
   font-size: 14px;
-  color: darkslategrey;
+  color: var(--color-active);
   font-weight: 500;
   min-height: 20px;
 }
@@ -84,7 +84,7 @@
 #chat-log .message .message-header .message-sender {
   flex: 3;
   margin: 0px;
-  color: darkslategrey;
+  color: var(--color-active);
   text-shadow: 0px 0px 1px #00000087;
   vertical-align: middle;
   position: relative;
@@ -101,7 +101,7 @@
   vertical-align: middle;
   font-size: 14px;
   font-weight: 500;
-  color: darkslategrey;
+  color: var(--color-active);
   text-shadow: 0px 0px 1px #00000087;
 }
 
@@ -110,7 +110,7 @@
   top: 0px;
   right: 0px;
   font-size: 13px;
-  color: darkslategrey;
+  color: var(--color-active);
   text-shadow: none;
 }
 
@@ -121,13 +121,13 @@
 
 .directory-item .folder-header h3,
 .directory-item .document-name {
-  color: darkslategrey;
+  color: var(--color-active);
   font-family: Quadrant-Regular;
   text-transform: uppercase;
 }
 
 .profile .item-profile img {
-  border: 2px solid #7c6c42;
+  border: 2px solid var(--color-active);
   width: 72px;
   height: 72px;
   border-radius: 50%;
@@ -302,7 +302,7 @@
 
 #archetype-groups .group {
   margin: 3px;
-  border: 1px solid darkslategray;
+  border: 1px solid var(--color-active);
   background: rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   padding: 2px;
@@ -327,13 +327,13 @@
   padding: 2px;
   width: fit-content;
   font-weight: bold;
-  color: darkslategrey;
+  color: var(--color-active);
 }
 
 .polaris-soulbound.sheet .group .equipment {
   width: fit-content;
   font-weight: bold;
-  color: darkslategrey;
+  color: var(--color-active);
   margin: 0px 5px;
 }
 
@@ -348,11 +348,11 @@
 .polaris-soulbound.sheet .group .equipment:hover,
 #archetype-groups .group .equipment:hover {
   cursor: pointer;
-  text-shadow: 0 0 8px goldenrod;
+  text-shadow: 0 0 8px var(--color-active);
 }
 
 #archetype-groups .dragenter {
-  outline: 1px dotted darkslategrey;
+  outline: 1px dotted var(--color-active);
 }
 
 #character-creation .character-creation {
@@ -577,8 +577,8 @@
 }
 
 #character-creation input.error {
-  border: 1px solid darkred;
-  color: darkred;
+  border: 1px solid var(--color-deadly);
+  color: var(--color-deadly);
 }
 
 .filter-results {
@@ -605,8 +605,8 @@ blockquote.foundry-note {
   border-radius: 20px;
   padding: 5px;
   background: linear-gradient(
-    rgba(255, 143, 32, 0.76) 0%,
-    rgba(255, 77, 30, 0.75) 100%
+    var(--color-active) 0%,
+    var(--color-header) 100%
   );
   box-shadow: 0 0 7px black;
   font-style: normal;

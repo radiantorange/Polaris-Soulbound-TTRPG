@@ -60,7 +60,7 @@
 }
 
 .polaris-soulbound.chat .targets a.target-selector {
-  color: darkslategray;
+  color: var(--color-active);
   font-size: 18px;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .polaris-soulbound.chat .targets .target {
-  border: 1px solid darkslategray;
+  border: 1px solid var(--color-active);
   display: flex;
   align-items: center;
   border-radius: 5px;
@@ -97,8 +97,8 @@
   align-items: center;
   justify-items: center;
   padding: 4px;
-  border-bottom: 2px solid #7c6c42;
-  border-right: 2px solid #7c6c42;
+  border-bottom: 2px solid var(--color-active);
+  border-right: 2px solid var(--color-active);
 }
 
 #reroller .polaris-soulbound.chat .diceContainer {
@@ -110,7 +110,7 @@
   width: 36px;
   height: 36px;
   margin: 2px 2px;
-  background-color: #00008b;
+  background-color: var(--color-active);
   border-radius: 4px;
 }
 
@@ -134,7 +134,7 @@
   width: 36px;
   height: 36px;
   margin: 2px 2px;
-  background-color: #daa520;
+  background-color: var(--color-header);
   border-radius: 4px;
 }
 .polaris-soulbound.chat .diceFailed {
@@ -142,7 +142,7 @@
   width: 36px;
   height: 36px;
   margin: 2px 2px;
-  background-color: darkgray;
+  background-color: var(--color-active);
   border-radius: 4px;
 }
 
@@ -182,7 +182,7 @@
 .polaris-soulbound.chat .diceLabel {
   padding: 8px 0 2px 0;
   font-family: var(--font-text);
-  color: whitesmoke;
+  color: var(--color-header);
   font-size: 24px;
   text-align: center;
 }
