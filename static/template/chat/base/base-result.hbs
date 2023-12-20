@@ -1,6 +1,6 @@
 <div class="content-rowElement">
     {{#if result.success}}
-        <h4 style="color: var(--color-succeed)"><strong>{{localize "CHAT.SUCCESS" degree=result.degree}}</strong></h4>
+        <h4 style="color: var(--color-succeed)"><strong>{{localize "CHAT.SUCCESS_ONE" successes=result.successes}}</strong></h4>
     {{else}}
         <h4 style="color: var(--color-deadly)">{{localize "CHAT.FAILED" degree=result.degree}}</h4>
     {{/if}}

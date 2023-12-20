@@ -128,6 +128,7 @@
   "CHARGEN.ERROR.TOO_MANY_TALENTS": "Too many talents selected",
   "CHARGEN.ERROR.UNRESOLVED_ITEMS": "Unresolved Generic Items",
   "CHAT.SUCCESS": "Succeeded with {degree} additional successes",
+  "CHAT.SUCCESS_ONE": "Succeeded with {successes} successes",
   "CHAT.FAILED": "Failed, missing {degree}",
   "CHAT.FOCUS": "Focus",
   "CHAT.DAMAGE": "Damage",
