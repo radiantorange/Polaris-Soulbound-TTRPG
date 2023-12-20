@@ -5,7 +5,7 @@
     <div class="content-row">
         <div class="entry-vertical">
             <div class="segment-horizontal"><img src="systems/polaris-soulbound/asset/image/melee.webp" width="24"
-                    height="24" /><input type="text" value="{{system.combat.melee.ability}}" disabled /></div>
+                    height="24" /><input type="text" name="melee-ability" value="{{system.combat.melee.ability}}" disabled /></div>
             <div class="segment-horizontal">{{localize "HEADER.BONUS"}}: <div class="sheet-table-value"><input
                         name="system.combat.melee.bonus" type="number" value="{{system.combat.melee.bonus}}"
                         data-dtype="Number" /></div>
@@ -13,7 +13,7 @@
         </div>
         <div class="entry-vertical">
             <div class="segment-horizontal"><img src="systems/polaris-soulbound/asset/image/accuracy.webp"
-                    width="24" height="24" /><input type="text" value="{{system.combat.accuracy.ability}}" disabled />
+                    width="24" height="24" /><input name="accuracy-ability" type="text" value="{{system.combat.accuracy.ability}}" disabled />
             </div>
             <div class="segment-horizontal">{{localize "HEADER.BONUS"}}: <div class="sheet-table-value"><input
                         name="system.combat.accuracy.bonus" type="number" value="{{system.combat.accuracy.bonus}}"
@@ -22,7 +22,7 @@
         </div>
         <div class="entry-vertical">
             <div class="segment-horizontal"><img src="systems/polaris-soulbound/asset/image/defence.webp"
-                    width="24" height="24" /><input type="text" value="{{system.combat.defence.ability}}" disabled />
+                    width="24" height="24" /><input name="defense-ability" type="text" value="{{system.combat.defence.ability}}" disabled />
             </div>
             <div class="segment-horizontal">{{localize "HEADER.BONUS"}}: <div class="sheet-table-value"><input
                         name="system.combat.defence.bonus" type="number" value="{{system.combat.defence.bonus}}"
@@ -47,7 +47,7 @@
                         value="{{system.combat.health.toughness.value}}" data-dtype="Number" /></div>
                 {{#unless actor.isSwarm}}
                     /
-                    <div class="sheet-table-valueMain"><input type="number"
+                    <div class="sheet-table-valueMain"><input name="toughness-max" type="number"
                             value="{{system.combat.health.toughness.max}}" data-dtype="Number" disabled /></div>
             </div>
             <div class="segment-horizontal">{{localize "HEADER.BONUS"}}: <div class="sheet-table-value"><input
@@ -63,17 +63,17 @@
         <h3>{{localize "HEADER.WOUND"}}</h3>
         <div class="segment-horizontal">
             {{#if data.combat.health.wounds.deadly}}
-                <div class="sheet-table-valueMain"><input class="deadly" type="text"
+                <div class="sheet-table-valueMain"><input name="wounds-value-deadly" class="deadly" type="text"
                         value="{{system.combat.health.wounds.value}}" disabled /></div>
             {{else}}
-                <div class="sheet-table-valueMain"><input type="text" value="{{system.combat.health.wounds.value}}"
+                <div class="sheet-table-valueMain"><input name="wounds-value-minor" type="text" value="{{system.combat.health.wounds.value}}"
                         disabled /></div>
             {{/if}}
-            / <div class="sheet-table-valueMain"><input type="text" value="{{system.combat.health.wounds.max}}"
+            / <div class="sheet-table-valueMain"><input name="wounds-value-max" type="text" value="{{system.combat.health.wounds.max}}"
                     disabled /></div>
         </div>
 
-        <div class="segment-horizontal">{{localize "HEADER.BONUS"}}: <div class="sheet-table-value"><input
+        <div class="segment-horizontal">{{localize "HEADER.BONUS"}}: <div class="sheet-table-value"><input name="wounds-value-bonus"
                     name="system.combat.health.wounds.bonus" type="number" value="{{system.combat.health.wounds.bonus}}"
                     data-dtype="Number" /></div>
         </div>
@@ -84,10 +84,10 @@
         <div class="segment-horizontal">
             <div class="sheet-table-valueMain"><input name="system.combat.mettle.value" type="number"
                     value="{{system.combat.mettle.value}}" data-dtype="Number" /></div> / <div
-                class="sheet-table-valueMain"><input type="number" value="{{system.combat.mettle.max}}"
+                class="sheet-table-valueMain"><input name="mettle-max" type="number" value="{{system.combat.mettle.max}}"
                     data-dtype="Number" disabled /></div>
         </div>
-        <div class="segment-horizontal">{{localize "HEADER.BONUS"}}: <div class="sheet-table-value"><input
+        <div class="segment-horizontal">{{localize "HEADER.BONUS"}}: <div class="sheet-table-value"><input name="mettle-bonus"
                     name="system.combat.mettle.bonus" type="number" value="{{system.combat.mettle.bonus}}"
                     data-dtype="Number" /></div>
         </div>
@@ -99,14 +99,14 @@
             <h3>{{localize "HEADER.INITIATIVE"}}</h3>
             <div class="sheet-table-value"><input name="system.combat.initiative.bonus" type="number"
                     value="{{system.combat.initiative.bonus}}" data-dtype="Number" /></div>
-            <div class="sheet-table-value"><input type="number" value="{{system.combat.initiative.total}}"
+            <div class="sheet-table-value"><input name="total-initiative" type="number" value="{{system.combat.initiative.total}}"
                     data-dtype="Number" disabled /></div>
         </div>
         <div class="segment-horizontal">
             <h3>{{localize "HEADER.NATURAL_AWARENESS"}}</h3>
             <div class="sheet-table-value"><input name="system.combat.naturalAwareness.bonus" type="number"
                     value="{{system.combat.naturalAwareness.bonus}}" data-dtype="Number" /></div>
-            <div class="sheet-table-value"><input type="number" value="{{system.combat.naturalAwareness.total}}"
+            <div class="sheet-table-value"><input name="natural-awareness-total" type="number" value="{{system.combat.naturalAwareness.total}}"
                     data-dtype="Number" disabled /></div>
         </div>
         <div class="segment-horizontal">
@@ -136,7 +136,7 @@
                         {{/select}}
                     </select>
                     <div class="wound-value">
-                        <input type="number" class="wound-edit" data-edit-type="value" value="{{wound.damage}}" />
+                        <input name="wound-damage" type="number" class="wound-edit" data-edit-type="value" value="{{wound.damage}}" />
                     </div>
 
                     <div class="button">
