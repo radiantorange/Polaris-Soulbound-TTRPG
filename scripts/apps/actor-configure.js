@@ -1,15 +1,13 @@
-export default class ActorConfigure extends FormApplication
-{
-    static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
-            id: "actor-configure",
-            template : "systems/age-of-sigmar-soulbound/template/apps/actor-configure.hbs",
-            width:420
-        })
-    }
+export default class ActorConfigure extends FormApplication {
+  static get defaultOptions() {
+    return mergeObject(super.defaultOptions, {
+      id: "actor-configure",
+      template: "systems/polaris-soulbound/template/apps/actor-configure.hbs",
+      width: 420,
+    });
+  }
 
-    
-    async _updateObject(event, formData) {
-        this.object.update(formData)
-    }
+  async _updateObject(event, formData) {
+    this.object.update(formData);
+  }
 }
