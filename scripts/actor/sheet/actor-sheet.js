@@ -437,6 +437,7 @@ export class AgeOfSigmarActorSheet extends ActorSheet {
     else if (item.type == "miracle")
       test = await this.actor.setupMiracleTest(powerId);
 
+    item.sendToChat();
     await test.rollTest();
     test.sendToChat();
   }
