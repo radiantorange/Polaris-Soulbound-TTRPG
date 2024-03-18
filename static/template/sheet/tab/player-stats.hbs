@@ -71,7 +71,7 @@
 <div class="item-list">
     <div class="item-header">
         <h1 class="header-text">{{localize "TITLE.TALENTS"}}</h1>
-        <a class="item-create absolute" data-tooltip="Add Talent" data-type="talent"><i class="fas fa-plus"></i></a>
+        <a class="item-create absolute" data-tooltip="Añadir Talento" data-type="talent"><i class="fas fa-plus"></i></a>
     </div>
     {{#each items.talents as |item|}}
         <div class="item" data-item-id="{{item.id}}">
@@ -84,7 +84,7 @@
                 </div>
                 {{#if item.nonTransferEffects.length}}
                     <div class="item-property">
-                        <a data-tooltip="Transfer effects to selected tokens" class="transfer-effect"><i
+                        <a data-tooltip="Transferir efectos a los token seleccionados" class="transfer-effect"><i
                                 class="fas fa-crosshairs"></i></a>
                     </div>
                 {{/if}}

@@ -121,7 +121,7 @@
             <b class="name">{{localize "WOUND.TYPE"}}</b>
             <b class="damage">{{localize "WOUND.DAMAGE"}}</b>
             <div class="button">
-                <a class="wound-create" data-tooltip="Add Wound"><i class="fas fa-plus"></i></a>
+                <a class="wound-create" data-tooltip="Añadir Herida"><i class="fas fa-plus"></i></a>
             </div>
         </div>
         <div class="segment-vertical wounds-list">
@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="button">
-                        <a class="item-control wound-delete" data-tooltip="Delete Wound"><i
+                        <a class="item-control wound-delete" data-tooltip="Eliminar herida"><i
                                 class="fas fa-trash"></i></a>
                     </div>
                 </div>
@@ -187,7 +187,7 @@
     <div class="item-list">
         <div class="item-header">
             <h1 class="header-text">{{localize "TITLE.TALENTS"}}</h1>
-            <a class="item-create absolute" data-tooltip="Add Talent" data-type="talent"><i class="fas fa-plus"></i></a>
+            <a class="item-create absolute" data-tooltip="Añadir talento" data-type="talent"><i class="fas fa-plus"></i></a>
         </div>
         {{#each items.talents as |item|}}
             <div class="item" data-item-id="{{item.id}}">
@@ -200,7 +200,7 @@
                     </div>
                     {{#if item.nonTransferEffects.length}}
                         <div class="item-property">
-                            <a data-tooltip="Transfer effects to selected tokens" class="transfer-effect"><i
+                            <a data-tooltip="Transferir efectos a los tokens escogidos" class="transfer-effect"><i
                                     class="fas fa-crosshairs"></i></a>
                         </div>
                     {{/if}}
