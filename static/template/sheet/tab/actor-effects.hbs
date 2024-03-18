@@ -5,7 +5,7 @@
       {{#unless (eq "dead" effect.key)}}
         <div class="condition" data-tooltip="{{effect.name}}" data-key="{{effect.key}}" {{#unless
           effect.existing}}style="opacity:0.5" {{/unless}}>
-          <a class="condition-click" data-tooltip="{{{effect.tooltip}}}"><img src="{{effect.img}}" /></a>
+          <a class="condition-click" data-html="true" data-tooltip="{{{effect.tooltip}}}"><img src="{{effect.img}}" /></a>
           <a class="condition-toggle">
             {{#if effect.existing}}
               <i class="far fa-check-square"></i>

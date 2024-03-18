@@ -219,7 +219,69 @@ AOS.traits = {
 
 AOS.dicePath = "systems/polaris-soulbound/asset/image";
 AOS.traitDescriptions = {};
-AOS.conditionDescriptions = {};
+AOS.conditionDescriptions = {
+  blinded: `<p><b>Cegado</b></p><p>A Blinded creature cannot see.</p>
+  <p>The Difficulty of Mind (Awareness) Tests that rely on
+  sight are increased by 2.</p>
+  <p>Opposed Mind (Awareness) Tests are made at
+  Greater Disadvantage.</p>
+  <p>The target’s Melee, Accuracy, and Defence decrease
+  one step.</p>`,
+  charmed: `<p><b>Hechizado</b></p>
+  <p>A Charmed creature cannot attack the source of the
+charm, and cannot target it with abilities or spells
+that would affect it negatively.</p>
+<p>The charmer has Advantage in social interactions
+with the Charmed target, and the target has
+Disadvantage.</p>`,
+  deafened: `<p><b>Ensordecido</b></p>
+  <p>A Deafened creature cannot hear.</p>
+  <p>The dice pool for any Tests a Deafened creature
+makes that require hearing is reduced by 1.</p>`,
+  frightened: `<p><b>Asustado</b></p>
+  <p>While the source of a Frightened creature’s fear is in
+  line of sight, they roll one less die for all Tests. The
+  character can not willingly move closer to the source
+  of its fear.</p>
+  `,
+  incapacitated: `<p><b>Incapacitado</b></p>
+  <p>An Incapacitated creature can’t Move, take Actions,
+or spend Mettle.</p>
+<p>Incapacitated creatures can’t defend themselves. The
+DN to hit an Incapacitated creature is always 2.</p>`,
+  poisoned: `<p><b>Envenenado</b></p>
+  <p>A Poisoned creature's dice pool is reduced by 1 for
+  all Tests.</p>
+  `,
+  prone: `<p><b>Tumbado</b></p>
+  <p>A Prone creature can only move by crawling (see
+    page 140), unless they use their Move to stand up to
+    end the Condition.</p>
+    <p>The creature’s Melee and Accuracy are decreased one
+    step.</p>
+    <p>A creature attacking a Prone target from Close Range
+    increases their Melee or Accuracy one step.
+    <p>A creature attacking a Prone target from outside
+    Close Range decreases their Accuracy one step
+    per Zone: one step for Short Range, two steps for
+    Medium Range, and three steps for Long Range</p>`,
+  restrained: `<p><b>Inmovilizado</b></p>
+  <p>A Restrained creature cannot move.</p>
+  <p>A Restrained creature’s Melee, Accuracy, and Defence
+decrease one step.</p>`,
+  stunned: `<p><b>Aturdido</b></p>
+  <p>A Stunned creature can take either an Action or
+Move, but not both.</p>
+<p>The creature can’t spend Mettle to take additional
+Actions.</p>
+<p>The creature’s Speed becomes Slow (see page 140).</p>
+<p>The Stunned creature’s Defence decreases one step.</p>`,
+  unconscious: `<p><b>Inconsciente</b></p>
+  <p>An Unconscious creature immediately drops anything
+they are holding, falls Prone, and is Incapacitated.</p>
+<p>Unconscious creatures can’t move or speak, and are
+unaware of their surroundings.</p>`,
+};
 
 AOS.traitsWithValue = ["range", "thrown", "blast"];
 
