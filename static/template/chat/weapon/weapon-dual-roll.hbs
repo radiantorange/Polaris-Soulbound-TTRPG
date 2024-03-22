@@ -1,7 +1,7 @@
 <div class="age-of-sigmar-soulbound chat roll">
     <div class="content-box">
         <div class="content-header">
-            <h2>DN {{result.primary.dn.difficulty}}:{{result.primary.dn.complexity}} {{result.primary.dn.name}} Test
+            <h2>DN {{result.primary.dn.difficulty}}:{{result.primary.dn.complexity}} {{result.primary.dn.name}}
             </h2>
             {{#if testData.dualWieldingData.primary.name}}
                 {{log testData}}
@@ -15,8 +15,7 @@
     </div>
     <div class="content-box">
         <div class="content-header" style='border-top: none'>
-            <h2>DN {{result.secondary.dn.difficulty}}:{{result.secondary.dn.complexity}} {{result.secondary.dn.name}}
-                Test</h2>
+            <h2>DN {{result.secondary.dn.difficulty}}:{{result.secondary.dn.complexity}} {{result.secondary.dn.name}}</h2>
             {{#if testData.dualWieldingData.secondary.name}}
                 <div class="target" data-token-id="{{testData.dualWieldingData.secondary.tokenId}}">
                     {{testData.dualWieldingData.secondary.name}}</div>
