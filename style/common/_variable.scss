@@ -39,16 +39,16 @@
 :root {
     --color-title: black;
     --color-text: black;
-    --color-border: #806b3a;
-    --color-active: goldenrod;
-    --color-header: whitesmoke;
-    --color-succeed: darkgreen;
-    --color-deadly: #680B0B;
-    --color-header-gold: #806b3a;
-    --color-header-blue: #183051;
+    --color-border: #2e3440; /*#806b3a*/
+    --color-active: #4c566a; /*var(--color-active)*/
+    --color-header: #e5e9f0; /*var(--color-header)*/
+    --color-succeed: #8fbcbb; /*darkgreen;*/
+    --color-deadly: #bf616a; /*#680b0b*/
+    --color-header-gold: #2e3440; /*#806b3a;*/
+    --color-header-blue: #81a1c1; /*#183051*/
     --color-header-black: black;
     --font-text: "MinionPro";
     --font-header: "Quadrant-Regular";
     --font-sidebar: "PompeiStd";
-    --color-border-highlight: #806b3a;
+    --color-border-highlight: #2e3440; /*#2e3440*/
 }

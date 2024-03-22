@@ -13,23 +13,23 @@ li.folder > .folder-header .create-folder, li.folder > .folder-header .create-do
 }
 
 a:hover {
-    text-shadow: 0 0 8px goldenrod
+    text-shadow: 0 0 8px var(--color-active)
 }
 
 .tabs .item.active {
-        text-shadow: 0 0 10px goldenrod
+        text-shadow: 0 0 10px var(--color-active)
 }
 
 select:focus {
-    box-shadow: 0 0 5px goldenrod
+    box-shadow: 0 0 5px var(--color-active)
 }
 
 #block-tabs {
     flex: 0 0 32px;
     box-sizing: border-box;
     margin: 0 0 5px;
-    border-bottom: 1px solid goldenrod;
-    box-shadow: 0 0 10px gold;
+    border-bottom: 1px solid var(--color-active);
+    box-shadow: 0 0 10px var(--color-active)
 }
 
 select {
@@ -41,8 +41,8 @@ select {
 }
 
 #block-tabs > .item.active {
-    border:1px solid goldenrod;
-    box-shadow: 0 0 6px inset goldenrod;
+    border:1px solid var(--color-active);
+    box-shadow: 0 0 6px inset var(--color-active);
 }
 
 input[type="text"]:focus, 
@@ -50,7 +50,7 @@ input[type="number"]:focus,
 input[type="password"]:focus, 
 input[type="date"]:focus, 
 input[type="time"]:focus {
-    box-shadow: 0 0 5px goldenrod;
+    box-shadow: 0 0 5px var(--color-active);
 }
 
 .window-header{
@@ -58,16 +58,16 @@ input[type="time"]:focus {
     flex-direction: row;
     color: var(--color-text);
     font-family: var(--font-text);
-    color: whitesmoke;
-    border: 2px solid #7c6c42;
+    color: var(--color-header);
+    border: 2px solid var(--color-active);
     background-image: url('./asset/image/header-background.webp');
     background-size: cover;
     border-bottom: none
 }
 
 ::-webkit-scrollbar-thumb {
-    background: darkgoldenrod;
-    border: 1px solid goldenrod;
+    background: var(--color-active);
+    border: 1px solid var(--color-active);
 }
 
 #playlists .global-control .playlist-header,
@@ -106,7 +106,7 @@ li.folder > .folder-header h3 {
 }
 
 li.directory-item.folder:not(.collapsed) {
-    box-shadow: inset 0 0 10px blue;
+    box-shadow: inset 0 0 10px var(--color-active)
 }
 
 .directory .directory-list .directory-item.context, .directory .directory-list .directory-item.active {
@@ -141,14 +141,14 @@ li.directory-item.folder:not(.collapsed) {
 #compendium .compendium-name {
     color: var(--color-text);
     font-family: var(--font-text);
-    color: whitesmoke;
-    border: 2px solid #7c6c42;
+    color: var(--color-header);
+    border: 2px solid var(--color-active);
     background-image: url('./asset/image/header-background.webp');
     background-size: cover;
 }
 
 #compendium .source {
-    color: whitesmoke;
+    color: var(--color-header);
 }
 
 #compendium li.compendium-pack .compendium-footer {
@@ -174,7 +174,7 @@ li.directory-item.folder:not(.collapsed) {
 }
 
 .age-of-sigmar-soulbound h2 {
-    color:whitesmoke;
+    color:var(--color-header);
 }
 
 .age-of-sigmar-soulbound h3 {
@@ -193,7 +193,7 @@ li.directory-item.folder:not(.collapsed) {
 }
 
 .age-of-sigmar-soulbound h4 {
-    color: whitesmoke;
+    color: var(--color-header);
 }
 
 .age-of-sigmar-soulbound.sheet .editor{
@@ -270,7 +270,7 @@ li.directory-item.folder:not(.collapsed) {
 }
 
 .roll-dialog .dialog-effects .content-box .content-row{
-    border-right: 2px solid #7c6c42
+    border-right: 2px solid var(--color-active)
 }
 
 .roll-dialog .dialog-effects .content-box select{
@@ -289,7 +289,7 @@ li.directory-item.folder:not(.collapsed) {
     display: flex;
     flex-direction: column;
     background: url(./asset/image/input.webp) repeat;
-    border-left: 2px solid #7c6c42;
+    border-left: 2px solid var(--color-active);
 }
 
 /* .fill{
@@ -299,7 +299,7 @@ li.directory-item.folder:not(.collapsed) {
 .content-row{
     display:flex;
     flex-direction: row;
-    border-bottom: 2px solid #7c6c42;
+    border-bottom: 2px solid var(--color-active);
     flex-grow:1;
     align-items:stretch;
 }
@@ -307,7 +307,7 @@ li.directory-item.folder:not(.collapsed) {
 .content-column{
     display:flex;
     flex-direction: column;
-    border-right: 2px solid #7c6c42;
+    border-right: 2px solid var(--color-active);
     flex-grow: 1;
 }
 
@@ -319,8 +319,8 @@ li.directory-item.folder:not(.collapsed) {
     align-items: center;
     justify-items: center;
     padding: 4px;
-    border-bottom: 2px solid #7c6c42;
-    border-right: 2px solid #7c6c42;
+    border-bottom: 2px solid var(--color-active);
+    border-right: 2px solid var(--color-active);
 }
 
 .content-header{
@@ -329,12 +329,12 @@ li.directory-item.folder:not(.collapsed) {
     align-items: center;
     color: var(--color-text);
     font-family: var(--font-text);
-    color: whitesmoke;
-    border-bottom: 2px solid #7c6c42;
+    color: var(--color-header);
+    border-bottom: 2px solid var(--color-active);
     background-image: url('./asset/image/header-background.webp');
     background-size: cover;
-    border-right: 2px solid #7c6c42;
-    border-top: 2px solid #7c6c42;
+    border-right: 2px solid var(--color-active);
+    border-top: 2px solid var(--color-active);
     justify-content: center;
 }
 
@@ -349,8 +349,8 @@ li.directory-item.folder:not(.collapsed) {
     flex-direction: column;
     align-content:stretch;
     align-items: stretch;
-    border-right: 2px solid #7c6c42;
-    border-bottom: 2px solid #7c6c42;
+    border-right: 2px solid var(--color-active);
+    border-bottom: 2px solid var(--color-active);
     flex-grow:1;
 }
 
@@ -381,7 +381,7 @@ li.directory-item.folder:not(.collapsed) {
     display:flex;
     flex-direction: column;
     flex:1;
-    border-right: 2px solid #7c6c42;
+    border-right: 2px solid var(--color-active);
     justify-content: center;
     align-items: center;
 
@@ -392,7 +392,7 @@ li.directory-item.folder:not(.collapsed) {
     flex-direction: row;
     flex-grow: 1;
     align-items: center;
-    border-right: 2px solid #7c6c42;
+    border-right: 2px solid var(--color-active);
     padding: 2px;
 }
 
@@ -439,7 +439,7 @@ li.directory-item.folder:not(.collapsed) {
 
 .entry-list .inline-list > *{
     margin: 3px;
-    border: 1px solid darkslategray;
+    border: 1px solid var(--color-active);
     background: rgba(0, 0, 0, 0.05);
     border-radius: 5px;
     padding: 2px;
@@ -478,7 +478,7 @@ li.directory-item.folder:not(.collapsed) {
 .entry-list .entry-element.equipment:hover,
     .entry-list .entry-element.talents:hover {
     cursor: pointer;
-    text-shadow: 0 0 8px goldenrod
+    text-shadow: 0 0 8px var(--color-active)
     
 }
 
@@ -583,7 +583,7 @@ padding-top: 4px;
 
 .journal-page-content .sidebar,
 .editor .sidebar {
-    border-left: 3px solid darkgoldenrod
+    border-left: 3px solid var(--color-active)
 }
 
 .editor.sidebar h4,
@@ -809,12 +809,12 @@ a.content-link,
 a.inline-roll {
     background: none;
     border: 1px solid var(--color-header-gold);
-    color: darkslategrey
+    color: var(--color-active)
 }
 
 a.content-link i,
 a.inline-roll i {
-    color: darkslategrey;
+    color: var(--color-active);
     vertical-align: middle;
 }
 .editor .block a.content-link i,
@@ -888,7 +888,7 @@ a.inline-roll i {
 .prosemirror .editor-menu {
     // background: linear-gradient(36deg, rgba(83,123,176,1) 0%, rgba(24,48,81,1) 33%, rgba(24,48,81,1) 66%, rgba(83,123,176,1) 100%);
     // border: 0px;
-    background: rgba(128, 107, 58, 0.5);
+    background: rgba(58, 92, 128, 0.5);
     border-radius: 0px  ;
     .pm-dropdown {
         color: var(--color-header-blue)
