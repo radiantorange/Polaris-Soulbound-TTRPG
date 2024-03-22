@@ -67,13 +67,13 @@ Hooks.once("init", () => {
 
 
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("age-of-sigmar-soulbound", PlayerSheet, { types: ["player"], makeDefault: true });
-    Actors.registerSheet("age-of-sigmar-soulbound", NpcSheet, { types: ["npc"], makeDefault: true });
-    Actors.registerSheet("age-of-sigmar-soulbound", PartySheet, { types: ["party"], makeDefault: true });
+    Actors.registerSheet("polaris-soulbound", PlayerSheet, { types: ["player"], makeDefault: true });
+    Actors.registerSheet("polaris-soulbound", NpcSheet, { types: ["npc"], makeDefault: true });
+    Actors.registerSheet("polaris-soulbound", PartySheet, { types: ["party"], makeDefault: true });
     Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("age-of-sigmar-soulbound", AgeOfSigmarItemSheet, { makeDefault: true });
-    DocumentSheetConfig.registerSheet(ActiveEffect, "age-of-sigmar-soulbound", AgeOfSigmarEffectSheet, { makeDefault: true, label : "Soulbound Active Effect Config" });
-    DocumentSheetConfig.registerSheet(JournalEntryPage, "age-of-sigmar-soulbound", Level4TextPageSheet, { types : ["text"], makeDefault: true, label : "Soulbound Journal Sheet" });
+    Items.registerSheet("polaris-soulbound", AgeOfSigmarItemSheet, { makeDefault: true });
+    DocumentSheetConfig.registerSheet(ActiveEffect, "polaris-soulbound", AgeOfSigmarEffectSheet, { makeDefault: true, label : "Soulbound Active Effect Config" });
+    DocumentSheetConfig.registerSheet(JournalEntryPage, "polaris-soulbound", Level4TextPageSheet, { types : ["text"], makeDefault: true, label : "Soulbound Journal Sheet" });
     initializeHandlebars();
     
     game.aos = {

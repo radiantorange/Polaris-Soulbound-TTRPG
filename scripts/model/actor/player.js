@@ -98,7 +98,7 @@ export class PlayerModel extends StandardActorModel
 
     get autoCalc() {
         return mergeObject(super.autoCalc, {
-            tokenSize : this.parent.getFlag("age-of-sigmar-soulbound", "autoCalcTokenSize")
+            tokenSize : this.parent.getFlag("polaris-soulbound", "autoCalcTokenSize")
         })
     }
 }

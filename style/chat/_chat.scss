@@ -1,17 +1,17 @@
-.age-of-sigmar-soulbound.chat {
+.polaris-soulbound.chat {
     color: var(--color-text);
     font-family: var(--font-text);
     font-size: 13x;
     line-height: 17px;
 }
 
-.age-of-sigmar-soulbound.chat strong {
+.polaris-soulbound.chat strong {
     font-family: var(--font-text);
     font-weight: bold;
     font-size: 13px;
 }
 
-.age-of-sigmar-soulbound.chat h2 {
+.polaris-soulbound.chat h2 {
     align-items: center;
     font-family: var(--font-text);
     padding: 4px;
@@ -23,21 +23,21 @@
     text-align: left;
 }
 
-.age-of-sigmar-soulbound.chat h3 {
+.polaris-soulbound.chat h3 {
     font-family: var(--font-text);
     font-size: 16px;
     font-weight: bold;
     padding: 2px;
 }
 
-.age-of-sigmar-soulbound.chat h4 {
+.polaris-soulbound.chat h4 {
     font-family: var(--font-text);
     font-size: 14px;
     font-weight: bold;
     margin: 2px;
 }
 
-.age-of-sigmar-soulbound.chat h3 + h4 {
+.polaris-soulbound.chat h3 + h4 {
     margin-top: -4px;
 }
 
@@ -45,22 +45,22 @@
     background-image: linear-gradient(to right, var(--color-border), #183051, #183051, #183051, #183051,#183051, var(--color-border));
 }
 
-.age-of-sigmar-soulbound.chat.item:hover {    
+.polaris-soulbound.chat.item:hover {    
     outline: 1px dotted black;
     cursor: pointer
 }
 
 
-.age-of-sigmar-soulbound.chat .targets a.target-selector {
+.polaris-soulbound.chat .targets a.target-selector {
     color: var(--color-active);
     font-size: 18px;
 }
 
-.age-of-sigmar-soulbound.chat .targets a.target-selector:hover {
+.polaris-soulbound.chat .targets a.target-selector:hover {
     cursor: pointer;
 }
 
-.age-of-sigmar-soulbound.chat .targets {
+.polaris-soulbound.chat .targets {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -69,7 +69,7 @@
 }
 
 
-.age-of-sigmar-soulbound.chat .targets .target {
+.polaris-soulbound.chat .targets .target {
     border: 1px solid var(--color-active);
     display: flex;
     align-items: center;
@@ -82,7 +82,7 @@
 }
 
 
-.age-of-sigmar-soulbound.chat .diceContainer {
+.polaris-soulbound.chat .diceContainer {
 	display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -95,12 +95,12 @@
     border-right: 2px solid var(--color-active);
 }
 
-#reroller .age-of-sigmar-soulbound.chat .diceContainer
+#reroller .polaris-soulbound.chat .diceContainer
 {
     border: none
 }
 
-.age-of-sigmar-soulbound.chat .dice {
+.polaris-soulbound.chat .dice {
     flex:none;
 	width: 36px;
 	height: 36px;
@@ -109,22 +109,22 @@
     border-radius: 4px;
 }
 
-.age-of-sigmar-soulbound.chat .diceImg {
+.polaris-soulbound.chat .diceImg {
     flex:none;
 	width: 36px;
 	height: 36px;
 	margin: 2px 2px;
 }
 
-.age-of-sigmar-soulbound.chat .die {
+.polaris-soulbound.chat .die {
     position: relative
 }
 
-.age-of-sigmar-soulbound.chat .selected .diceImg {
+.polaris-soulbound.chat .selected .diceImg {
     outline: 3px solid var(--color-active)
 }
 
-.age-of-sigmar-soulbound.chat .diceHighlight {
+.polaris-soulbound.chat .diceHighlight {
 	flex:none;
     width: 36px;
 	height: 36px;
@@ -132,7 +132,7 @@
     background-color: var(--color-header);
     border-radius: 4px;
 }
-.age-of-sigmar-soulbound.chat .diceFailed {
+.polaris-soulbound.chat .diceFailed {
 	flex:none;
     width: 36px;
 	height: 36px;
@@ -141,7 +141,7 @@
     border-radius: 4px;
 }
 
-.age-of-sigmar-soulbound.chat .focus-counter {
+.polaris-soulbound.chat .focus-counter {
     height: 20px;
     width: 20px;
     background-color: var(--color-header-blue);
@@ -157,7 +157,7 @@
     z-index: 1;
 }
 
-.age-of-sigmar-soulbound.chat .reroll-icon {
+.polaris-soulbound.chat .reroll-icon {
     height: 20px;
     width: 20px;
     background-color: var(--color-header-blue);
@@ -175,7 +175,7 @@
 }
 
 
-.age-of-sigmar-soulbound.chat .diceLabel {
+.polaris-soulbound.chat .diceLabel {
 	padding: 8px 0 2px 0;
     font-family: var(--font-text);
     color: var(--color-header);
@@ -183,22 +183,22 @@
     text-align: center;
 }
 
-.age-of-sigmar-soulbound.chat img {
+.polaris-soulbound.chat img {
 	border:none;
     margin: 2px;
 }
 
-.age-of-sigmar-soulbound.chat p {
+.polaris-soulbound.chat p {
     margin: 0 0 4px 4px;
 }
 
-.age-of-sigmar-soulbound.chat .test-buttons {
+.polaris-soulbound.chat .test-buttons {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.age-of-sigmar-soulbound.chat .test-buttons > button{
+.polaris-soulbound.chat .test-buttons > button{
     flex: 0.8;
     margin: 10px;
     font-size: 13px;
@@ -208,31 +208,31 @@
     justify-content: center;
 }
 
-.age-of-sigmar-soulbound.chat .overcast-buttons {
+.polaris-soulbound.chat .overcast-buttons {
     display: flex;
     flex-direction: column;
 }
 
-.age-of-sigmar-soulbound.chat .overcast-buttons .overcast-labels{
+.polaris-soulbound.chat .overcast-buttons .overcast-labels{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.age-of-sigmar-soulbound.chat .overcast-buttons .overcast-groups {
+.polaris-soulbound.chat .overcast-buttons .overcast-groups {
     display: flex;
     justify-content: space-around;
 }
 
-.age-of-sigmar-soulbound.chat .overcast-buttons .overcast-groups > *{
+.polaris-soulbound.chat .overcast-buttons .overcast-groups > *{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.age-of-sigmar-soulbound.chat .overcast-buttons .overcast-groups .overcast-group button {
+.polaris-soulbound.chat .overcast-buttons .overcast-groups .overcast-group button {
     margin: 10px;
 }
 

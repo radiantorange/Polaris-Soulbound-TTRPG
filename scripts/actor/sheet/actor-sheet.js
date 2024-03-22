@@ -6,7 +6,7 @@ export class AgeOfSigmarActorSheet extends ActorSheet {
 
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            classes: ["age-of-sigmar-soulbound", "sheet", "actor"],
+            classes: ["polaris-soulbound", "sheet", "actor"],
             tabs: [
                 {
                     navSelector: ".sheet-tabs",
@@ -312,7 +312,7 @@ export class AgeOfSigmarActorSheet extends ActorSheet {
             effectData["duration.rounds"] = 1;
           }
 
-        let html = await renderTemplate("systems/age-of-sigmar-soulbound/template/dialog/quick-effect.hbs")
+        let html = await renderTemplate("systems/polaris-soulbound/template/dialog/quick-effect.hbs")
         let dialog = new Dialog({
             title : game.i18n.localize("QUICKEFFECT.TITLE"),
             content : html,

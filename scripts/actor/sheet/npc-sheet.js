@@ -4,7 +4,7 @@ export class NpcSheet extends AgeOfSigmarActorSheet {
 
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
-            template: "systems/age-of-sigmar-soulbound/template/sheet/npc.hbs",
+            template: "systems/polaris-soulbound/template/sheet/npc.hbs",
         });
     }
 

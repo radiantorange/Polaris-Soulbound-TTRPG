@@ -27,7 +27,7 @@ export default class Test {
     }
 
     get template() {
-        return "systems/age-of-sigmar-soulbound/template/chat/base/base-roll.hbs"
+        return "systems/polaris-soulbound/template/chat/base/base-roll.hbs"
     }
 
     static recreate(data)
@@ -186,7 +186,7 @@ export default class Test {
             rollMode: game.settings.get("core", "rollMode"),
             content: html,
             flags: {
-                "age-of-sigmar-soulbound.rollData" : this.data
+                "polaris-soulbound.rollData" : this.data
             }
         };
         chatData.speaker.alias = this.actor.token ? this.actor.token.name : this.actor.prototypeToken.name
@@ -206,7 +206,7 @@ export default class Test {
         {
             return ChatMessage.create(chatData).then(msg => {
                 this.context.messageId = msg.id;
-                msg.update({"flags.age-of-sigmar-soulbound.rollData" : this.data})
+                msg.update({"flags.polaris-soulbound.rollData" : this.data})
             });
         }
     }

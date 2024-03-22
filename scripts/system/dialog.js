@@ -5,7 +5,7 @@ export class RollDialog extends Dialog {
     static get defaultOptions() {
         let options = super.defaultOptions;
         options.classes.push("roll-dialog")
-        options.classes.push("age-of-sigmar-soulbound")
+        options.classes.push("polaris-soulbound")
         options.resizable = true;
         return options
     }
@@ -22,7 +22,7 @@ export class RollDialog extends Dialog {
         this.removeHiddenChanges(hide, data);
         data.condensedChanges = this.condenseChanges(data.changes);
         return new Promise(async (resolve, reject) => {
-            const html = await renderTemplate("systems/age-of-sigmar-soulbound/template/dialog/common-roll.hbs", data);
+            const html = await renderTemplate("systems/polaris-soulbound/template/dialog/common-roll.hbs", data);
             return new this({
                 title: data.title,
                 content: html,
@@ -308,7 +308,7 @@ export class CombatDialog extends RollDialog {
         this.removeHiddenChanges(hide, data);
         data.condensedChanges = this.condenseChanges(data.changes);
         return new Promise(async (resolve, reject) => {
-            const html = await renderTemplate("systems/age-of-sigmar-soulbound/template/dialog/combat-roll.hbs", data);
+            const html = await renderTemplate("systems/polaris-soulbound/template/dialog/combat-roll.hbs", data);
             return new this({
                 title: data.title,
                 actor : data.actor,
@@ -424,7 +424,7 @@ export class CombatDialog extends RollDialog {
                 data.secondaryTarget = duplicate(data.primaryTarget)
         }
 
-        if (game.settings.get("age-of-sigmar-soulbound", "loseTarget") && canvas.scene) {
+        if (game.settings.get("polaris-soulbound", "loseTarget") && canvas.scene) {
             game.user.updateTokenTargets([])
         }
 
@@ -584,7 +584,7 @@ export class SpellDialog extends RollDialog {
         this.removeHiddenChanges(hide, data);
         data.condensedChanges = this.condenseChanges(data.changes);
         return new Promise(async (resolve, reject) => {
-            const html = await renderTemplate("systems/age-of-sigmar-soulbound/template/dialog/spell-roll.hbs", data);
+            const html = await renderTemplate("systems/polaris-soulbound/template/dialog/spell-roll.hbs", data);
             return new this({
                 title: data.title,
                 dialogData : data,
@@ -619,7 +619,7 @@ export class SpellDialog extends RollDialog {
         let data = super._dialogData(actor, attribute, skill)
         mergeObject(data, spell.difficultyNumber)
         data.spell = spell
-        if (game.settings.get("age-of-sigmar-soulbound", "loseTarget") && canvas.scene) {
+        if (game.settings.get("polaris-soulbound", "loseTarget") && canvas.scene) {
             game.user.updateTokenTargets([])
         }
         return data

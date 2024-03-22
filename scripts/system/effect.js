@@ -165,7 +165,7 @@ export default class AgeOfSigmarEffect extends ActiveEffect {
     }
 
     get changeConditionals() {
-        return (getProperty(this, "flags.age-of-sigmar-soulbound.changeCondition") || {})
+        return (getProperty(this, "flags.polaris-soulbound.changeCondition") || {})
     }
 
     get hasRollEffect() {
@@ -200,7 +200,7 @@ export default class AgeOfSigmarEffect extends ActiveEffect {
     }
 
     get requiresEquip() {
-        return this.getFlag("age-of-sigmar-soulbound", "requiresEquip")
+        return this.getFlag("polaris-soulbound", "requiresEquip")
     }
 
     get isCondition() {

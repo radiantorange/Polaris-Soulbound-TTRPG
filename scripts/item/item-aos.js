@@ -140,12 +140,12 @@ export class AgeOfSigmarItem extends Item {
             item.img = null;
         }
 
-        const html = await renderTemplate("systems/age-of-sigmar-soulbound/template/chat/item.hbs", { item, data: item.system });
+        const html = await renderTemplate("systems/polaris-soulbound/template/chat/item.hbs", { item, data: item.system });
         const chatData = {
             user: game.user.id,
             rollMode: game.settings.get("core", "rollMode"),
             content: html,
-            "flags.age-of-sigmar-soulbound.itemData" : this.toObject()
+            "flags.polaris-soulbound.itemData" : this.toObject()
         };
 
         ChatMessage.applyRollMode(chatData, chatData.rollMode)

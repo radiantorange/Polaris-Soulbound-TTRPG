@@ -196,7 +196,7 @@
     left: 251px; */
     width: 240px;
     height: 85px;
-    background: url(/systems/age-of-sigmar-soulbound/asset/image/background.webp) repeat;
+    background: url(/systems/polaris-soulbound/asset/image/background.webp) repeat;
     border: 2px solid var(--color-header-gold);
     border-radius: 0px;
     box-shadow: 0 0 15px inset;
@@ -298,7 +298,7 @@
   height: 95%
 }
 
-.age-of-sigmar-soulbound.sheet .group-wrapper,
+.polaris-soulbound.sheet .group-wrapper,
 #archetype-groups .group-wrapper {
     display: flex;
     flex-direction: column;
@@ -318,13 +318,13 @@
     display: flex;
 }
 
-.age-of-sigmar-soulbound.sheet .group-wrapper .group
+.polaris-soulbound.sheet .group-wrapper .group
 {
     padding: 2px;
     display: flex;
 }
 
-.age-of-sigmar-soulbound.sheet .group-wrapper .group-list,
+.polaris-soulbound.sheet .group-wrapper .group-list,
 #archetype-groups .group-list
 {
     display: flex;
@@ -342,23 +342,23 @@
     color: var(--color-active)
 }
 
-.age-of-sigmar-soulbound.sheet .group .equipment {
+.polaris-soulbound.sheet .group .equipment {
     width: fit-content;
     font-weight: bold;
     color: var(--color-active);
     margin: 0px 5px
 }
 
-.age-of-sigmar-soulbound.sheet .group a {
+.polaris-soulbound.sheet .group a {
     margin: 0px 5px
 }
 
 
-.age-of-sigmar-soulbound.sheet .comma{
+.polaris-soulbound.sheet .comma{
     margin-left: -4px;
 }
 
-.age-of-sigmar-soulbound.sheet .group .equipment:hover,
+.polaris-soulbound.sheet .group .equipment:hover,
 #archetype-groups .group .equipment:hover
 {   
     cursor: pointer;

@@ -15,7 +15,7 @@ export default class BugReportFormSoulbound extends Application {
         ]
 
         this.domainKeys = [
-            "age-of-sigmar-soulbound",
+            "polaris-soulbound",
             "soulbound-core",
             "soulbound-starter-set",
             "soulbound-order",
@@ -23,7 +23,7 @@ export default class BugReportFormSoulbound extends Application {
         ]
 
         this.domainKeysToLabel = {
-            "age-of-sigmar-soulbound" : "system",
+            "polaris-soulbound" : "system",
             "soulbound-core" : "core",
             "soulbound-starter-set" : "starter-set",
             "soulbound-order" : "champions-of-order",
@@ -37,8 +37,8 @@ export default class BugReportFormSoulbound extends Application {
     static get defaultOptions() {
         const options = super.defaultOptions;
         options.id = "bug-report";
-        options.template = "systems/age-of-sigmar-soulbound/template/apps/bug-report.hbs"
-        options.classes.push("age-of-sigmar-soulbound", "soulbound-bug-report");
+        options.template = "systems/polaris-soulbound/template/apps/bug-report.hbs"
+        options.classes.push("polaris-soulbound", "soulbound-bug-report");
         options.resizable = true;
         options.width = 600;
         options.height = "auto";
@@ -58,7 +58,7 @@ export default class BugReportFormSoulbound extends Application {
     getData() {
         let data = super.getData();
         data.domains = this.domains;
-        data.name = game.settings.get("age-of-sigmar-soulbound", "bugReportName")
+        data.name = game.settings.get("polaris-soulbound", "bugReportName")
         return data;
     }
 
@@ -252,11 +252,11 @@ export default class BugReportFormSoulbound extends Application {
             if (label)
                 data.labels.push(label);
 
-            game.settings.set("age-of-sigmar-soulbound", "bugReportName", data.issuer);
+            game.settings.set("polaris-soulbound", "bugReportName", data.issuer);
 
             let officialModules = Array.from(game.modules).filter(m => this.domainKeys.includes(m.id))
             
-            let versions = `<br/>age-of-sigmar-soulbound: ${game.system.version}`
+            let versions = `<br/>polaris-soulbound: ${game.system.version}`
 
             for (let mod of officialModules)
             {

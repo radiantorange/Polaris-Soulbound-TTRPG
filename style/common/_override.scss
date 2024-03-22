@@ -163,14 +163,14 @@ li.directory-item.folder:not(.collapsed) {
     color: var(--color-border)
 }
 
-.age-of-sigmar-soulbound.sheet.actor .window-content .fas:hover,
-.age-of-sigmar-soulbound.sheet.actor .window-content .button:hover,
-.age-of-sigmar-soulbound.sheet.actor .window-content .item-control:hover {
+.polaris-soulbound.sheet.actor .window-content .fas:hover,
+.polaris-soulbound.sheet.actor .window-content .button:hover,
+.polaris-soulbound.sheet.actor .window-content .item-control:hover {
     text-shadow: 0 0 10px var(--color-active);
     box-shadow: none;
 }
 
-.age-of-sigmar-soulbound h1 {
+.polaris-soulbound h1 {
     font-family: Quadrant-Regular;
     font-size: 14pt;
     font-weight: normal;
@@ -181,11 +181,11 @@ li.directory-item.folder:not(.collapsed) {
     text-align: center;
 }
 
-.age-of-sigmar-soulbound h2 {
+.polaris-soulbound h2 {
     color:var(--color-header);
 }
 
-.age-of-sigmar-soulbound h3 {
+.polaris-soulbound h3 {
     font-family: Quadrant-Regular;
     font-size: 10pt;
     font-weight: normal;
@@ -196,19 +196,19 @@ li.directory-item.folder:not(.collapsed) {
     border: none
 }
 
-.age-of-sigmar-soulbound .combat-misc h3 {
+.polaris-soulbound .combat-misc h3 {
     text-align: left;
 }
 
-.age-of-sigmar-soulbound h4 {
+.polaris-soulbound h4 {
     color: var(--color-header);
 }
 
-.age-of-sigmar-soulbound.sheet .editor{
+.polaris-soulbound.sheet .editor{
     height: 100%;
 }
 
-.age-of-sigmar-soulbound.sheet .tox{
+.polaris-soulbound.sheet .tox{
     display: flex;
     flex-direction: column;
     align-content: stretch;
@@ -216,11 +216,11 @@ li.directory-item.folder:not(.collapsed) {
     min-height: 550px;
 }
 
-.age-of-sigmar-soulbound.sheet .tox-edit-area{
+.polaris-soulbound.sheet .tox-edit-area{
     padding: 0px 7px;
 }
 
-.age-of-sigmar-soulbound.sheet .journal-entry-page.text{
+.polaris-soulbound.sheet .journal-entry-page.text{
     padding: 0px 7px;
 }
 
@@ -231,7 +231,7 @@ li.directory-item.folder:not(.collapsed) {
 .window-app.image-popout .window-content {
     background: url(./asset/image/background.webp) repeat;
 }
-.age-of-sigmar-soulbound.dialog {
+.polaris-soulbound.dialog {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -906,7 +906,7 @@ a.inline-roll i {
     }
 }
 
-.age-of-sigmar-soulbound .editor-content {
+.polaris-soulbound .editor-content {
     padding: 0px 5px
 }
 

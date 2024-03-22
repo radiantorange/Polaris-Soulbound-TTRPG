@@ -7,7 +7,7 @@ export class AgeOfSigmarItemSheet extends ItemSheet {
 
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["age-of-sigmar-soulbound", "sheet", "item"],
+      classes: ["polaris-soulbound", "sheet", "item"],
       width: 420,
       height: 530,
       resizable: true,
@@ -24,7 +24,7 @@ export class AgeOfSigmarItemSheet extends ItemSheet {
   }
 
   get template() {
-    return `systems/age-of-sigmar-soulbound/template/sheet/${this.item.type}.hbs`
+    return `systems/polaris-soulbound/template/sheet/${this.item.type}.hbs`
   }
 
   
@@ -248,7 +248,7 @@ export class AgeOfSigmarItemSheet extends ItemSheet {
 
       let effectData = { label: this.item.name, icon: (this.item.img || "icons/svg/aura.svg") }
 
-      let html = await renderTemplate("systems/age-of-sigmar-soulbound/template/dialog/quick-effect.hbs", effectData)
+      let html = await renderTemplate("systems/polaris-soulbound/template/dialog/quick-effect.hbs", effectData)
       let dialog = new Dialog({
         title: "Quick Effect",
         content: html,

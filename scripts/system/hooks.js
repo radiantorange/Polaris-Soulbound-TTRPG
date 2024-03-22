@@ -9,7 +9,7 @@ import TokenHelpers from "./token-helpers.js";
 
 export default function registerHooks() {
     Hooks.once("init", () => {
-        game.settings.register("age-of-sigmar-soulbound", "initiativeRule", {
+        game.settings.register("polaris-soulbound", "initiativeRule", {
             name: "SETTING.INIT_RULE",
             hint: "SETTING.INIT_HINT",
             scope: "world",
@@ -27,14 +27,14 @@ export default function registerHooks() {
             }
         });
 
-        game.settings.register("age-of-sigmar-soulbound", "systemMigrationVersion", {
+        game.settings.register("polaris-soulbound", "systemMigrationVersion", {
             scope: "world",
             config: false,
             default: "",
             type: String
         });
 
-        game.settings.register('age-of-sigmar-soulbound', 'soulfire', {
+        game.settings.register('polaris-soulbound', 'soulfire', {
             name: "Soulfire",
             hint: "",
             scope: "world",
@@ -42,7 +42,7 @@ export default function registerHooks() {
             default: 0,
             type: Number
         });
-        game.settings.register('age-of-sigmar-soulbound', 'doom', {
+        game.settings.register('polaris-soulbound', 'doom', {
             name: "Doom",
             hint: "",
             scope: "world",
@@ -50,7 +50,7 @@ export default function registerHooks() {
             default: 0,
             type: Number
         });
-        game.settings.register('age-of-sigmar-soulbound', 'playerCounterEdit', {
+        game.settings.register('polaris-soulbound', 'playerCounterEdit', {
             name: "Player Counter Edit",
             hint: "",
             scope: "world",
@@ -58,7 +58,7 @@ export default function registerHooks() {
             default: true,
             type: Boolean
         });
-        game.settings.register('age-of-sigmar-soulbound', 'counterParty', {
+        game.settings.register('polaris-soulbound', 'counterParty', {
             name: "Counter Party Link",
             hint: "",
             scope: "world",
@@ -67,7 +67,7 @@ export default function registerHooks() {
             type: String
         });
 
-      game.settings.register("age-of-sigmar-soulbound", "counterPosition", {
+      game.settings.register("polaris-soulbound", "counterPosition", {
         name: "Counter Position",
         hint: "",
         scope: "client",
@@ -76,7 +76,7 @@ export default function registerHooks() {
         type: Object
       });
 
-      game.settings.register("age-of-sigmar-soulbound", "showCounter", {
+      game.settings.register("polaris-soulbound", "showCounter", {
         name: "Show Counter",
         hint: "Show the Soulfire / Doom Counter",
         scope: "client",
@@ -85,7 +85,7 @@ export default function registerHooks() {
         type: Boolean
       });
 
-      game.settings.register('age-of-sigmar-soulbound', 'bugReportName', {
+      game.settings.register('polaris-soulbound', 'bugReportName', {
         name: 'Bug Report Name',
         scope: 'world',
         config: false,
@@ -93,7 +93,7 @@ export default function registerHooks() {
         type: String,
       });
 
-      game.settings.register("age-of-sigmar-soulbound", "loseTarget", {
+      game.settings.register("polaris-soulbound", "loseTarget", {
         name: "SETTING.TARGET_RULE",
         hint: "SETTING.TARGET_HINT",
         scope: "client",
@@ -105,10 +105,10 @@ export default function registerHooks() {
 
         game.macro = AOS_MacroUtil;
 
-        _registerInitiative(game.settings.get("age-of-sigmar-soulbound", "initiativeRule"));
+        _registerInitiative(game.settings.get("polaris-soulbound", "initiativeRule"));
 
 
-        game.socket.on("system.age-of-sigmar-soulbound", async data => {
+        game.socket.on("system.polaris-soulbound", async data => {
             if (data.type == "updateCounter") {
               game.counter.render(true)
             }
@@ -116,7 +116,7 @@ export default function registerHooks() {
               if (game.counter.party)
                 game.counter.party.update({[`data.${data.payload.type}.value`] : parseInt(data.payload.value)})
               else
-                await game.settings.set("age-of-sigmar-soulbound", data.payload.type, data.payload.value)
+                await game.settings.set("polaris-soulbound", data.payload.type, data.payload.value)
               game.counter.render(true)
             }
           })
@@ -128,12 +128,12 @@ export default function registerHooks() {
 
 
     Hooks.on("renderChatMessage", (message, html) => {
-        let item = html.find(".age-of-sigmar-soulbound.chat.item")
+        let item = html.find(".polaris-soulbound.chat.item")
         if (item.length)
         {
             item.attr("draggable", true)
             item[0].addEventListener("dragstart", ev => {
-                ev.dataTransfer.setData("text/plain", JSON.stringify({type : "itemFromChat", payload : message.getFlag("age-of-sigmar-soulbound", "itemData")}))
+                ev.dataTransfer.setData("text/plain", JSON.stringify({type : "itemFromChat", payload : message.getFlag("polaris-soulbound", "itemData")}))
             })
         }
 
@@ -204,7 +204,7 @@ export default function registerHooks() {
         game.aos.tags.createTags()
 
         CONFIG.ChatMessage.documentClass.prototype.getTest = function() {
-            let rollData = this.getFlag("age-of-sigmar-soulbound", "rollData")
+            let rollData = this.getFlag("polaris-soulbound", "rollData")
             if (rollData)
                 return game.aos.rollClass.Test.recreate(rollData)
         }
@@ -249,7 +249,7 @@ export default function registerHooks() {
         condition: game.user.isGM && canLink,
         icon: '<i class="fas fa-link"></i>',
         callback: async target => {
-          await game.settings.set('age-of-sigmar-soulbound', 'counterParty', target.attr('data-document-id'))
+          await game.settings.set('polaris-soulbound', 'counterParty', target.attr('data-document-id'))
           game.counter.render(true)
         }
       })
@@ -260,16 +260,16 @@ export default function registerHooks() {
             effect.updateSource({"transfer" : false})
 
         if (effect.item && effect.item.equippable && effect.parent.documentName == "Item")
-            effect.updateSource({"flags.age-of-sigmar-soulbound.requiresEquip" : true})
+            effect.updateSource({"flags.polaris-soulbound.requiresEquip" : true})
         else if (effect.item && effect.parent.documentName == "Actor")
         {
-            effect.updateSource({"flags.age-of-sigmar-soulbound.requiresEquip" : getProperty(data, "flags.age-of-sigmar-soulbound.requiresEquip")})
+            effect.updateSource({"flags.polaris-soulbound.requiresEquip" : getProperty(data, "flags.polaris-soulbound.requiresEquip")})
             effect.updateSource({"disabled" : effect.disabled})
         }
     })
 
     Hooks.on("updateActor", (actor, updateData) => {
-        if(actor.type == "party" && actor.id == game.settings.get('age-of-sigmar-soulbound', 'counterParty'))
+        if(actor.type == "party" && actor.id == game.settings.get('polaris-soulbound', 'counterParty'))
         {
             if (hasProperty(updateData, "system.soulfire.value") || hasProperty(updateData, "system.doom.value"))
                 game.counter.render(true)
@@ -300,10 +300,10 @@ export default function registerHooks() {
         if (actor.combat.mettle.value < actor.combat.mettle.max)
             actor.update({"system.combat.mettle.value" : actor.combat.mettle.value + actor.combat.mettle.regain})
         
-        let zones = TokenHelpers.withinDrawings(combat.combatant.token).filter(d => d.getFlag("age-of-sigmar-soulbound", "hazard"))
+        let zones = TokenHelpers.withinDrawings(combat.combatant.token).filter(d => d.getFlag("polaris-soulbound", "hazard"))
         zones.forEach(z => {
-            let hazard = z.getFlag("age-of-sigmar-soulbound", "hazard")
-            let ignoreArmour = z.getFlag("age-of-sigmar-soulbound", "ignoreArmour")
+            let hazard = z.getFlag("polaris-soulbound", "hazard")
+            let ignoreArmour = z.getFlag("polaris-soulbound", "ignoreArmour")
             let damage = game.aos.config.zoneHazardDamage[hazard]
             actor.applyDamage(damage, {ignoreArmour})
         })

@@ -6,8 +6,8 @@ export class PartySheet extends AgeOfSigmarActorSheet {
         let dragDrop = [...super.defaultOptions.dragDrop];
         dragDrop.push({ dropSelector: '.party' });
         return mergeObject(super.defaultOptions, {
-            classes: ["age-of-sigmar-soulbound", "sheet", "actor"],
-            template: "systems/age-of-sigmar-soulbound/template/sheet/party.hbs",
+            classes: ["polaris-soulbound", "sheet", "actor"],
+            template: "systems/polaris-soulbound/template/sheet/party.hbs",
             dragDrop: dragDrop
         });
     }
@@ -119,7 +119,7 @@ export class PartySheet extends AgeOfSigmarActorSheet {
     }
 
     async _addAllyOrEnemy(actor) {
-        let partyItem = {name : actor.name, type : "partyItem", "flags.age-of-sigmar-soulbound.actorId" : actor.id}
+        let partyItem = {name : actor.name, type : "partyItem", "flags.polaris-soulbound.actorId" : actor.id}
         new Dialog({
             title : `${game.i18n.localize("PARTY.AllyOrEnemy")}`,
             content : `<p>${game.i18n.localize("PARTY.AllyOrEnemy")}</p>`,
@@ -149,8 +149,8 @@ export class PartySheet extends AgeOfSigmarActorSheet {
         const id = div.data("itemId");
         let item = this.actor.items.get(id)
         let actor
-        if (item.getFlag("age-of-sigmar-soulbound", "actorId"))
-            actor = game.actors.get(item.getFlag("age-of-sigmar-soulbound", "actorId"))
+        if (item.getFlag("polaris-soulbound", "actorId"))
+            actor = game.actors.get(item.getFlag("polaris-soulbound", "actorId"))
         if (actor && event.button == 0)
             actor.sheet.render(true)
         else 

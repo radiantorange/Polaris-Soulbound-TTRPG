@@ -311,7 +311,7 @@ export class AgeOfSigmarActor extends Actor {
 
     async onEnterDrawing(drawing)
     {
-        let flags = drawing.flags["age-of-sigmar-soulbound"]
+        let flags = drawing.flags["polaris-soulbound"]
 
         let cover = flags.cover
         let hazard = flags.hazard
@@ -331,7 +331,7 @@ export class AgeOfSigmarActor extends Actor {
 
     async onLeaveDrawing(drawing)
     {
-        let flags = drawing.flags["age-of-sigmar-soulbound"]
+        let flags = drawing.flags["polaris-soulbound"]
 
         let cover = flags.cover
         let hazard = flags.hazard

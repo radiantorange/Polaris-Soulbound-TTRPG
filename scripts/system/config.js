@@ -221,7 +221,7 @@ AOS.traits = {
     twohanded : "TRAITS.TWOHANDED"
 }
 
-AOS.dicePath = "systems/age-of-sigmar-soulbound/asset/image"
+AOS.dicePath = "systems/polaris-soulbound/asset/image"
 AOS.traitDescriptions = {}
 AOS.conditionDescriptions = {}
 
@@ -237,7 +237,7 @@ AOS.systemEffects = {
             {key: "difficulty", mode : 6, value : -1}
         ],
         flags : { 
-            "age-of-sigmar-soulbound.changeCondition" : { 
+            "polaris-soulbound.changeCondition" : { 
                 0 : {description : "Ranged Attacks", script : "return data.weapon && data.weapon.traitList.range"},
                 1 : {description : "Being Detected", script : ""}
             }
@@ -252,7 +252,7 @@ AOS.systemEffects = {
             {key: "difficulty", mode : 6, value : -2}
         ],
         flags : { 
-            "age-of-sigmar-soulbound.changeCondition" : { 
+            "polaris-soulbound.changeCondition" : { 
                 0 : {description : "Ranged Attacks", script : "return !!(data.weapon && data.weapon.traitList.range)"},
                 1 : {description : "Being Detected", script : ""}
             }
@@ -266,7 +266,7 @@ AOS.systemEffects = {
             {key: "difficulty", mode : 6, value : 1},
         ],
         flags : { 
-            "age-of-sigmar-soulbound.changeCondition" : { 
+            "polaris-soulbound.changeCondition" : { 
                 0 : {description : "Mind (Awareness) Tests that rely on sight", script : ""}
             }
         }
@@ -282,7 +282,7 @@ AOS.systemEffects = {
             {key: "system.combat.defence.bonus", mode : 2, value : -1}
         ],
         flags : { 
-            "age-of-sigmar-soulbound.changeCondition" : { 
+            "polaris-soulbound.changeCondition" : { 
                 0 : {description : "Mind (Awareness) Tests that rely on sight", script : ""}
             }
         }
@@ -295,7 +295,7 @@ AOS.systemEffects = {
             {key: "difficulty", mode : 6, value : 1}
         ],
         flags : { 
-            "age-of-sigmar-soulbound.changeCondition" : { 
+            "polaris-soulbound.changeCondition" : { 
                 0 : {description : "Body (Reflexes) Tests", script : "return data.skillKey == 'reflexes'"}
             }
         }
@@ -307,7 +307,7 @@ CONFIG.statusEffects = [
     {
         id : "blinded",
         name : "CONDITION.BLINDED",
-        icon : "systems/age-of-sigmar-soulbound/asset/icons/blinded.svg",
+        icon : "systems/polaris-soulbound/asset/icons/blinded.svg",
         changes : [
             {key: "difficulty", mode : 6, value : 2},
             {key: "system.combat.melee.bonus", mode : 2, value : -1},
@@ -315,7 +315,7 @@ CONFIG.statusEffects = [
             {key: "system.combat.defence.bonus", mode : 2, value : -1}
         ],
         flags : { 
-            "age-of-sigmar-soulbound.changeCondition" : { 
+            "polaris-soulbound.changeCondition" : { 
                 0 : {description : "Mind (Awareness) Tests that rely on sight", script : ""}
             }
         }
@@ -323,15 +323,15 @@ CONFIG.statusEffects = [
     {
         id : "charmed",
         name : "CONDITION.CHARMED",
-        icon : "systems/age-of-sigmar-soulbound/asset/icons/charmed.svg"
+        icon : "systems/polaris-soulbound/asset/icons/charmed.svg"
     },
     {
         id : "deafened",
         name : "CONDITION.DEAFENED",
-        icon : "systems/age-of-sigmar-soulbound/asset/icons/deafened.svg",
+        icon : "systems/polaris-soulbound/asset/icons/deafened.svg",
         changes : [{key: "bonusDice", mode : 6, value : -1}],
         flags : { 
-            "age-of-sigmar-soulbound.changeCondition" : { 
+            "polaris-soulbound.changeCondition" : { 
                 0 : {description : "Requires Hearing", script : ""}
             }
         }
@@ -339,10 +339,10 @@ CONFIG.statusEffects = [
     {
         id : "frightened",
         name : "CONDITION.FRIGHTENED",
-        icon : "systems/age-of-sigmar-soulbound/asset/icons/frightened.svg",
+        icon : "systems/polaris-soulbound/asset/icons/frightened.svg",
         changes : [{key: "bonusDice", mode : 6, value : -1}],
         flags : { 
-            "age-of-sigmar-soulbound.changeCondition" : { 
+            "polaris-soulbound.changeCondition" : { 
                 0 : {description : "Within line of sight of the source of fear", script : ""}
             }
         }
@@ -350,15 +350,15 @@ CONFIG.statusEffects = [
     {
         id : "incapacitated",
         name : "CONDITION.INCAPACITATED",
-        icon : "systems/age-of-sigmar-soulbound/asset/icons/incapacitated.svg"
+        icon : "systems/polaris-soulbound/asset/icons/incapacitated.svg"
     },
     {
         id : "poisoned",
         name : "CONDITION.POISONED",
-        icon : "systems/age-of-sigmar-soulbound/asset/icons/poisoned.svg",
+        icon : "systems/polaris-soulbound/asset/icons/poisoned.svg",
         changes : [{key: "bonusDice", mode : 6, value : -1}],
         flags : { 
-            "age-of-sigmar-soulbound.changeCondition" : { 
+            "polaris-soulbound.changeCondition" : { 
                 0 : {description : "All Tests", script : "return true"}
             }
         }
@@ -366,7 +366,7 @@ CONFIG.statusEffects = [
     {
         id : "prone",
         name : "CONDITION.PRONE",
-        icon : "systems/age-of-sigmar-soulbound/asset/icons/prone.svg",
+        icon : "systems/polaris-soulbound/asset/icons/prone.svg",
         changes : [
             {key: "system.combat.melee.bonus", mode : 2, value : -1},
             {key: "system.combat.accuracy.bonus", mode : 2, value : -1}
@@ -375,7 +375,7 @@ CONFIG.statusEffects = [
     {
         id : "restrained",
         name : "CONDITION.RESTRAINED",
-        icon : "systems/age-of-sigmar-soulbound/asset/icons/restrained.svg",
+        icon : "systems/polaris-soulbound/asset/icons/restrained.svg",
         changes : [
             {key: "system.combat.melee.bonus", mode : 2, value : -1},
             {key: "system.combat.accuracy.bonus", mode : 2, value : -1},
@@ -385,7 +385,7 @@ CONFIG.statusEffects = [
     {
         id : "stunned",
         name : "CONDITION.STUNNED",
-        icon : "systems/age-of-sigmar-soulbound/asset/icons/stunned.svg",
+        icon : "systems/polaris-soulbound/asset/icons/stunned.svg",
         changes : [
             {key: "system.combat.speeds.foot", mode : 5, value : "slow"},
             {key: "system.combat.defence.bonus", mode : 2, value : -1}
@@ -394,12 +394,12 @@ CONFIG.statusEffects = [
     {
         id : "unconscious",
         name : "CONDITION.UNCONSCIOUS",
-        icon : "systems/age-of-sigmar-soulbound/asset/icons/unconscious.svg"
+        icon : "systems/polaris-soulbound/asset/icons/unconscious.svg"
     },
     {       
         id: "dead",
         name: "EFFECT.StatusDead", // Foundry Default Text Key
-        icon: "systems/age-of-sigmar-soulbound/asset/icons/dead.svg"
+        icon: "systems/polaris-soulbound/asset/icons/dead.svg"
     }
 ]
 

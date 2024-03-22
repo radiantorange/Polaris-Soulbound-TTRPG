@@ -8,7 +8,7 @@ export default class SoulboundCounter extends Application {
     static get defaultOptions() {
       const options = super.defaultOptions;
       options.id = 'counter';
-      options.template = 'systems/age-of-sigmar-soulbound/template/apps/counter.hbs';
+      options.template = 'systems/polaris-soulbound/template/apps/counter.hbs';
       options.popOut = true;
       return options;
     }
@@ -27,11 +27,11 @@ export default class SoulboundCounter extends Application {
       }
       else
       {
-        data.soulfire = game.settings.get('age-of-sigmar-soulbound', 'soulfire');
-        data.doom = game.settings.get('age-of-sigmar-soulbound', 'doom');
+        data.soulfire = game.settings.get('polaris-soulbound', 'soulfire');
+        data.doom = game.settings.get('polaris-soulbound', 'doom');
       }
       data.canEdit =
-        game.user.isGM || game.settings.get('age-of-sigmar-soulbound', 'playerCounterEdit');
+        game.user.isGM || game.settings.get('polaris-soulbound', 'playerCounterEdit');
   
       return data;
     }
@@ -39,9 +39,9 @@ export default class SoulboundCounter extends Application {
 
     render(force=false, options={})
     {
-      if (game.settings.get("age-of-sigmar-soulbound", "showCounter"))
+      if (game.settings.get("polaris-soulbound", "showCounter"))
       {
-        let position = game.settings.get("age-of-sigmar-soulbound", "counterPosition")
+        let position = game.settings.get("polaris-soulbound", "counterPosition")
         options.top = position.top || window.innerHeight - 200;
         options.left = position.left || 250;
         super.render(force, options);
@@ -66,7 +66,7 @@ export default class SoulboundCounter extends Application {
     setPosition(...args)
     {
       super.setPosition(...args)
-      game.settings.set("age-of-sigmar-soulbound", "counterPosition", this.position)
+      game.settings.set("polaris-soulbound", "counterPosition", this.position)
     }
   
     activateListeners(html) {
@@ -104,7 +104,7 @@ export default class SoulboundCounter extends Application {
           this.party.sheet.render(true)
         else 
         {
-          await game.settings.set('age-of-sigmar-soulbound', 'counterParty', "")
+          await game.settings.set('polaris-soulbound', 'counterParty', "")
           game.counter.render(true)
         }
       })
@@ -130,7 +130,7 @@ export default class SoulboundCounter extends Application {
       value = Math.round(value);
 
       if (!game.user.isGM) {
-        game.socket.emit('system.age-of-sigmar-soulbound', {
+        game.socket.emit('system.polaris-soulbound', {
           type: 'setCounter',
           payload: {value, type},
         });
@@ -143,10 +143,10 @@ export default class SoulboundCounter extends Application {
           await this.party.update({"system.doom.value" : parseInt(value)})
       }
       else
-        await game.settings.set('age-of-sigmar-soulbound', type, value);
+        await game.settings.set('polaris-soulbound', type, value);
       
       // Emit socket event for users to rerender their counters
-      game.socket.emit('system.age-of-sigmar-soulbound', {type: 'updateCounter'});
+      game.socket.emit('system.polaris-soulbound', {type: 'updateCounter'});
   
       // Some actors have effects based on doom, rerender their sheets to reflect the change
       if (type == "doom")
@@ -173,7 +173,7 @@ export default class SoulboundCounter extends Application {
       if (this.party)
           return parseInt(this.party[type].value)
       else 
-        return game.settings.get('age-of-sigmar-soulbound', type);
+        return game.settings.get('polaris-soulbound', type);
     }
 
     get soulfire()
@@ -187,7 +187,7 @@ export default class SoulboundCounter extends Application {
     }
 
     static get party() {
-      return game.actors.get(game.settings.get('age-of-sigmar-soulbound', 'counterParty'));
+      return game.actors.get(game.settings.get('polaris-soulbound', 'counterParty'));
     }
 
     get party() {

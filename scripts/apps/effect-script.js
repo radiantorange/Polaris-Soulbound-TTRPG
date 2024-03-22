@@ -3,7 +3,7 @@ export default class EffectScriptConfig extends FormApplication {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             id: "effect-script-config",
-            template: "systems/age-of-sigmar-soulbound/template/apps/effect-script.hbs",
+            template: "systems/polaris-soulbound/template/apps/effect-script.hbs",
             height: 400,
             width: 500,
             title: game.i18n.localize("HEADER.EFFECT_SCRIPT_CONFIG"),
@@ -37,7 +37,7 @@ export default class EffectScriptConfig extends FormApplication {
         let description = formData.description || "";
         let hide = formData.hide || "";
 
-        return this.object.effect.update({[`flags.age-of-sigmar-soulbound.changeCondition.${this.object.index}`] : {script, description, hide}})
+        return this.object.effect.update({[`flags.polaris-soulbound.changeCondition.${this.object.index}`] : {script, description, hide}})
     }
 
     activateListeners(html)

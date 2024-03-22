@@ -188,7 +188,7 @@ class ModuleDocumentResolver extends FormApplication
         options.resizable = true;
         options.height = 600
         options.width = 400
-        options.template = "systems/age-of-sigmar-soulbound/template/apps/document-resolver.hbs";
+        options.template = "systems/polaris-soulbound/template/apps/document-resolver.hbs";
         options.classes.push("document-resolver");
         options.title = game.i18n.localize("UPDATER.ResolveDuplicates");
         return options;

@@ -29,7 +29,7 @@ export class NPCModel extends StandardActorModel
         if (!data.prototypeToken)
         {
             mergeObject(preCreateData, {
-                "flags.age-of-sigmar-soulbound.autoCalcTokenSize" : true
+                "flags.polaris-soulbound.autoCalcTokenSize" : true
             });
         }
         return preCreateData;
@@ -111,7 +111,7 @@ export class NPCModel extends StandardActorModel
             toughness : this.bio.type > 1,
             mettle :  this.bio.type > 2,
             wounds :  this.bio.type > 3,
-            tokenSize : !this.isSwarm && this.parent.getFlag("age-of-sigmar-soulbound", "autoCalcTokenSize")
+            tokenSize : !this.isSwarm && this.parent.getFlag("polaris-soulbound", "autoCalcTokenSize")
         }
     }
 }

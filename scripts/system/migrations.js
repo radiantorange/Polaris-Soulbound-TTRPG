@@ -2,7 +2,7 @@ export default class Migration {
 
     static async checkMigration() {
         let migrationTarget = "6.0.0"
-        let systemMigrationVersion = game.settings.get("age-of-sigmar-soulbound", "systemMigrationVersion")
+        let systemMigrationVersion = game.settings.get("polaris-soulbound", "systemMigrationVersion")
 
         if (!systemMigrationVersion || foundry.utils.isNewerVersion(migrationTarget, systemMigrationVersion)) {
             this.migrateWorld();
@@ -11,7 +11,7 @@ export default class Migration {
         // if (!systemMigrationVersion || foundry.utils.isNewerVersion(migrationTarget, systemMigrationVersion)) {
         //     this.migrateExperience();
         // }
-        game.settings.set("age-of-sigmar-soulbound", "systemMigrationVersion", game.system.version)
+        game.settings.set("polaris-soulbound", "systemMigrationVersion", game.system.version)
     }
 
     // static async migrateExperience() {
@@ -135,14 +135,14 @@ export default class Migration {
     static migrateEffect(effect) {
         let effectData = effect.toObject()
 
-        let description = effect.getFlag("age-of-sigmar-soulbound", "description")
+        let description = effect.getFlag("polaris-soulbound", "description")
         effectData.changes.forEach((c, i) => {
             if (c.mode == 0) {
                 if (c.key.includes("target"))
                     c.mode = 7
                 else
                     c.mode = 6
-                setProperty(effectData, `flags.age-of-sigmar-soulbound.changeCondition.${i}`, { description, script: "" })
+                setProperty(effectData, `flags.polaris-soulbound.changeCondition.${i}`, { description, script: "" })
             }
         })
         return effectData
