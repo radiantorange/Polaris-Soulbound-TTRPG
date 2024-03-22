@@ -1,5 +1,19 @@
-{{> systems/age-of-sigmar-soulbound/template/chat/base/base-result.hbs}}
+<div class="content-rowElement">
+    {{#if result.success}}
+        <h4 style="color: var(--color-succeed)"><strong>{{localize "CHAT.SUCCESS" degree=result.degree}}</strong></h4>
+    {{else}}
+        <h4 style="color: var(--color-deadly)">{{localize "CHAT.FAILED" degree=result.degree}}</h4>
+    {{/if}}
+</div>
 
+<div class="content-wrapper">
+    {{#if context.focusAllocated}}
+        <p style="margin-top: 5px"><strong>{{localize "CHAT.FOCUS"}} :</strong> {{result.focus}}
+            {{localize "CHAT.FOCUS_APPLIED"}}</p>
+    {{else if result.focus}}
+        <p style="margin-top: 5px"><strong>{{localize "CHAT.FOCUS"}} :</strong>
+            {{localize "CHAT.FOCUS_AVAILABLE" focus=result.focus}}</p>
+    {{/if}}
 
 {{#if result.damage.total}}
     <p style="margin-top: 5px"><strong>{{localize "CHAT.DAMAGE"}} :</strong> {{result.damage.total}}</p>
