@@ -86,8 +86,16 @@ li.folder > .folder-header h3 {
 }
 
 #playlists .sound-control {
-    color: black;
+    color: var(--color-primary);
 }
+
+#playlists .sound-control.inactive {
+    color: var(--color-header);
+  }
+  
+  #playlists .sound-control:hover {
+    color: var(--color-header-blue);
+  }
 
 
 #combat li.combatant {
