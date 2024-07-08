@@ -2,7 +2,7 @@
   "id": "polaris-soulbound",
   "title": "Polaris",
   "description": "",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "minimumCoreVersion" : 11,
   "compatibility" : {
     "minimum" : 11,
