@@ -65,11 +65,6 @@ input[type="time"]:focus {
     border-bottom: none
 }
 
-::-webkit-scrollbar-thumb {
-    background: var(--color-active);
-    border: 1px solid var(--color-active);
-}
-
 #playlists .global-control .playlist-header,
 li.folder.collapsed > .folder-header {
     color: black;
@@ -914,4 +909,26 @@ a.inline-roll i {
     background: var(--color-header-blue);
     border: 2px solid var(--color-active);
     border-radius: 10px;
+}
+
+#chat-form textarea {
+    background: var(--color-header);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-active);
+    border: 1px solid var(--color-active);
+}
+:root {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-active);
 }
